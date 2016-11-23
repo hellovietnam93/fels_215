@@ -20,4 +20,8 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  fels215: "FELS215"
+  framgia: "FRAMGIA"
+  home: "Home"
+  login: "Log in"
+  signup: "Sign up"
