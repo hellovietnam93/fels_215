@@ -30,3 +30,11 @@ en:
   logout: "Log out"
   users: "Users"
   account: "Account"
+  views:
+    user:
+      submit: "Create my acount"
+      new: "Confirmation"
+  flash:
+    signup: "Sign up sucessfull"
+    error: "error"
+    formcontains: "The form contains"
