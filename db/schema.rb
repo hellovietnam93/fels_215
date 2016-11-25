@@ -34,8 +34,8 @@ ActiveRecord::Schema.define(version: 20161123083936) do
     t.string   "name"
     t.integer  "duration"
     t.integer  "num_ques_per_lesson"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",          null: false
+    t.datetime "updated_at",          null: false
   end
 
   create_table "lessons", force: :cascade do |t|
@@ -45,8 +45,8 @@ ActiveRecord::Schema.define(version: 20161123083936) do
     t.datetime "finish_time"
     t.integer  "category_id"
     t.integer  "user_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
     t.index ["category_id"], name: "index_lessons_on_category_id"
     t.index ["user_id"], name: "index_lessons_on_user_id"
   end
@@ -54,8 +54,8 @@ ActiveRecord::Schema.define(version: 20161123083936) do
   create_table "relationships", force: :cascade do |t|
     t.integer  "followed_id"
     t.integer  "follower_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
   end
 
   create_table "results", force: :cascade do |t|
@@ -74,16 +74,16 @@ ActiveRecord::Schema.define(version: 20161123083936) do
     t.string   "email"
     t.string   "password_digest"
     t.string   "remember_digest"
-    t.boolean  "is_admin", default: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.boolean  "is_admin",        default: false
+    t.datetime "created_at",                      null: false
+    t.datetime "updated_at",                      null: false
   end
 
   create_table "words", force: :cascade do |t|
     t.string   "content"
     t.integer  "category_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
     t.index ["category_id"], name: "index_words_on_category_id"
   end
 

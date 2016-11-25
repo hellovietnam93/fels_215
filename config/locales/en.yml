@@ -25,3 +25,8 @@ en:
   home: "Home"
   login: "Log in"
   signup: "Sign up"
+  profile: "Profile"
+  settings: "Settings"
+  logout: "Log out"
+  users: "Users"
+  account: "Account"

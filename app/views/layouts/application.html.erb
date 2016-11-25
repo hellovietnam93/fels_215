@@ -8,19 +8,10 @@
   <%= javascript_include_tag "application",
     "data-turbolinks-track": "reload" %>
 </head>
-<body>
-<header class="navbar navbar-inverse">
-  <div class="container">
-    <%= link_to t("framgia"), id: "logo" %>
-    <nav>
-      <ul class="nav navbar-nav navbar-right">
-        <li><%= link_to t("home"), "#" %></li>
-        <li><%= link_to t("login"), "#" %></li>
-        <li><%= link_to t("signup"), "#" %></li>
-      </ul>
-    </nav>
-  </div>
-</header>
-  <%= yield %>
-</body>
+  <body>
+    <%= render "layouts/header" %>
+    <div class="container">
+      <%= yield %>
+    </div>
+  </body>
 </html>
