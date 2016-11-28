@@ -1,0 +1,33 @@
+<div class="container-fluid main-container">
+  <%= render "layouts/admin/admin_navbar" %>
+  <div class="col-md-10 content">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <%= t "category" %>
+      </div>
+      <div class="panel-body">
+        <div class="row">
+          <div id="height150">
+            <div class="col-md-4">
+              <%= render "shared/error_messages", object: @category %>
+            </div>
+            <div class="col-md-4">
+              <h2><%= t :category %></h2>
+              <%= form_for [:admin, @category], remote: true do |f| %>
+                <%= f.text_field :name %>
+                <%=f.submit yield(:button_text), class: "btn btn-primary"  %>
+              <% end %>
+              <br/><br/>
+              <div class="list"></div>
+            </div>
+            <div class="col-md-4"></div>
+          </div>
+          <div id="div-list-category">
+            <%= render @categories %>
+            <%= will_paginate %>
+          </div>
+        </div>
+        </div>
+    </div>
+  </div>
+</div>
