@@ -30,6 +30,15 @@ en:
   logout: "Log out"
   users: "Users"
   account: "Account"
+  admin: "Admin"
+  category: "Category"
+  place_add: "Add category..."
+  add: "Add"
+  add_category: "Add category successfully"
+  edit: "Edit"
+  update_success: "Update successfull"
+  delete: "Delete"
+  delete_sucess: "You sure ?"
   views:
     user:
       submit: "Create my acount"
@@ -38,3 +47,7 @@ en:
     signup: "Sign up sucessfull"
     error: "error"
     formcontains: "The form contains"
+  category_not_found: "Category not found"
+  not_admin: "Not Admin"
+  please_login: "Please login"
+  word: "Words"
