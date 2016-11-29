@@ -1,0 +1,9 @@
+<ul class="list-group product-word-all" id="word-all">
+  <li class="list-group-item">
+    <%= word.content %>
+    <%= link_to t("delete"), "#", id: "delete-word",
+      method: :delete, data: {confirm: t("delete_sucess")} %>
+    <%= link_to t("edit"), edit_admin_word_path(word.id),
+      id: "edit-word"  %>
+  </li>
+</ul>

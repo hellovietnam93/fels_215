@@ -57,6 +57,7 @@ input {
   }
 }
 
+/* nav category */
 #height150 {
   height: 150px
 }
@@ -84,4 +85,20 @@ input {
 
 #edit-category {
   float: right;
+}
+
+/* Word */
+
+.product-word-all {
+  width: 1000px;
+  margin-top: 10px;
+}
+
+#edit-word {
+  float: right;
+}
+
+#delete-word {
+  float: right;
+  padding-left: 20px;
 }
