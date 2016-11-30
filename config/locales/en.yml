@@ -57,3 +57,7 @@ en:
   no_more_than_one: "No more than one correct answer"
   required-two-answers: "Required two answers"
   num_answers: "must greater than 1"
+  name: "Name"
+  duration: "Duration"
+  word_per_lesson: "Number word per lesson"
+  option: "Option"
