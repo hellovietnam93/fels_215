@@ -134,3 +134,66 @@ input {
 .answer {
   color: red;
 }
+
+.item-content {
+  margin-top: 10px;
+  label {
+    margin-top: 5px;
+    font-size: 20px;
+    display: block;
+  }
+}
+
+.result-item {
+  margin-bottom: 3%;
+}
+
+.item-content input {
+  width: 2%;
+  margin-top: 5px;
+}
+
+.btn-primary-finish-lesson {
+  width: 10%;
+}
+
+#lesson-countdown {
+  background: silver;
+  float: right;
+  padding: 15px;
+  font-weight: 800;
+  font-size: 50px;
+  box-shadow: inset 0 0 10px #000000;
+  position: fixed;
+  right: 10%;
+  top: 11%
+}
+
+#lesson-progress {
+  background: silver;
+  padding: 15px;
+  font-weight: 800;
+  font-size: 29px;
+  box-shadow: inset 0 0 10px #000000;
+  position: fixed;
+  right: 10%;
+  top: 34%;
+  text-align: center;
+}
+
+.item-header {
+  font-size: 35px;
+  font-weight: 700;
+}
+
+.finish-lesson {
+  width: 20%;
+}
+
+.glyphicon-ok {
+  color: green;
+}
+
+.glyphicon-remove {
+  color: red;
+}

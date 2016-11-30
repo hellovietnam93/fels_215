@@ -3,7 +3,7 @@ class CreateCategories < ActiveRecord::Migration[5.0]
     create_table :categories do |t|
       t.string :name
       t.integer :duration
-      t.integer :num_ques_per_lesson
+      t.integer :word_per_lesson
 
       t.timestamps
     end

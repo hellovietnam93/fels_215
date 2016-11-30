@@ -1,0 +1,21 @@
+<div class="container">
+  <% unless @lesson.finished? %>
+    <div id="lesson-countdown"></div>
+    <div id="lesson-progress" >
+      <span><%= t ".progress" %></span><br>
+      <span id="number-select">0</span>
+      <span><%= "/#{@lesson.category.word_per_lesson}" %></span>
+    </div>
+    <%= hidden_field :duration, "lesson",
+      value: (@lesson.finish_time - Time.now).to_i %>
+  <% end %>
+  <%= form_for @lesson do |f| %>
+    <div class="result-list">
+      <%= f.fields_for :results do |builder| %>
+        <%= render "result", f: builder %>
+      <% end %>
+    </div>
+    <%= f.submit t(".button_finish"),
+      class:"btn btn-primary finish-lesson" unless @lesson.finished? %>
+  <% end %>
+</div>

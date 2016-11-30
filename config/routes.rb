@@ -4,11 +4,11 @@ Rails.application.routes.draw do
   post "/login", to: "sessions#create"
   delete "/logout", to: "sessions#destroy"
   resources :users, except: [:destroy]
-  resources :categories, only: :index
   resources :words, only: :index
   resources :categories, only: [:index, :show] do
-    resources :lessons, except: [:destroy, :edit]
+    resources :lessons
   end
+  resources :lessons
   namespace :admin do
     root "dashboard#index", as: :home
     resources :categories

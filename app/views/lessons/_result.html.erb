@@ -1,0 +1,14 @@
+<div class="result-item" xmlns="http://www.w3.org/1999/html">
+  <div class="item-header">
+    <%= f.object.word.content %>
+  </div>
+  <div class="item-content">
+    <% f.object.word.answers.each do |answer| %>
+      <label>
+        <%= f.radio_button :answer_id, answer.id %>
+        <%= answer.content %>
+        <%= correct_answer f.object, answer %>
+      </label>
+    <% end %>
+  </div>
+</div>
