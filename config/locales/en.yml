@@ -41,12 +41,15 @@ en:
   delete_sucess: "You sure ?"
   views:
     user:
-      submit: "Create my acount"
+      create: "Create my acount"
+      edit: "Save changes"
+      update: "Update my profile"
       new: "Confirmation"
   flash:
     signup: "Sign up sucessfull"
     error: "error"
     formcontains: "The form contains"
+    update: "Profile updated"
   category_not_found: "Category not found"
   not_admin: "Not Admin"
   please_login: "Please login"
