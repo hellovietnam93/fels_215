@@ -5,6 +5,8 @@ class Admin::CategoriesController < ApplicationController
   before_action :load_categories, only: [:edit, :update, :new]
 
   def index
+    @categories = Category.search(params[:search]).paginate page:
+      params[:page], per_page: Settings.per_page
   end
 
   def new
@@ -20,6 +22,9 @@ class Admin::CategoriesController < ApplicationController
     else
       render :new
     end
+  end
+
+  def show
   end
 
   def edit

@@ -99,3 +99,28 @@ input {
   float: right;
   padding-left: 20px;
 }
+
+.tbl-categories {
+  margin-top: 100px;
+  margin-left: 130px;
+  width : 80%;
+}
+
+.tbl-categories td {
+  width: 25%;
+}
+
+.tbl-categories tr th, td {
+  text-align: center;
+}
+
+.txtSearch {
+  width: 500px;
+  float: left;
+  margin-left: 300px;
+}
+.btn-search {
+  width: 100px;
+  margin-left: 50px;
+  float:left;
+}
