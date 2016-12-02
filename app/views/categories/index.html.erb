@@ -1,0 +1,17 @@
+<% provide :button_text, t("search") %>
+<%= render "search_form" %>
+</div>
+  <table class="table table-striped tbl-categories">
+    <thead>
+      <tr>
+        <th><%= t "name" %></th>
+        <th><%= t "duration" %></th>
+        <th><%= t "word_per_lesson" %></th>
+        <th><%= t "option" %></th>
+      </tr>
+    </thead>
+    <tbody class="list-category">
+      <%= render @categories %>
+    </tbody>
+  </table>
+</div>
