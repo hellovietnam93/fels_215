@@ -1,18 +1,17 @@
-<% provide :button_text, t("search") %>
-<%= render "search_form" %>
-</div>
-<div>
+<% provide :title, @category.name %>
+<div class="container">
+  <div><%= link_to t("create_lesson"),
+    category_lessons_path(params[:id]) %></div>
   <table class="table table-striped tbl-categories">
     <thead>
       <tr>
         <th><%= t "name" %></th>
         <th><%= t "duration" %></th>
         <th><%= t "word_per_lesson" %></th>
-        <th><%= t "option" %></th>
       </tr>
     </thead>
     <tbody class="list-category">
-      <%= render @categories %>
+      <%= render @category %>
     </tbody>
   </table>
 </div>

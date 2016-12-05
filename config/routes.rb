@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   delete "/logout", to: "sessions#destroy"
   resources :users, except: [:destroy]
   resources :categories, only: :index
+  resources :words, only: :index
   namespace :admin do
     root "dashboard#index", as: :home
     resources :categories
