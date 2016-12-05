@@ -6,6 +6,9 @@ Rails.application.routes.draw do
   resources :users, except: [:destroy]
   resources :categories, only: :index
   resources :words, only: :index
+  resources :categories, only: [:index, :show] do
+    resources :lessons, except: [:destroy, :edit]
+  end
   namespace :admin do
     root "dashboard#index", as: :home
     resources :categories

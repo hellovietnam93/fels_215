@@ -2,14 +2,14 @@ class Admin::WordsController < ApplicationController
   before_action :logged_in_user
   before_action :verify_admin
   before_action :load_words
+  include CategoryUtils
 
   def index
   end
 
   def new
     @word = Word.new
-    Settings.answers_num_default.times{@word.answers.build}
-    load_categories
+      Settings.answers_num_default.times{@word.answers.build}
   end
 
   def create
@@ -27,10 +27,6 @@ class Admin::WordsController < ApplicationController
   def word_params
     params.require(:word).permit :content, :category_id,
       answers_attributes: [:content, :is_correct]
-  end
-
-  def load_categories
-    @categories = Category.all.map{|category| [ category.name, category.id ]}
   end
 
   def load_words

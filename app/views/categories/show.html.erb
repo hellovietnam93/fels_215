@@ -1,7 +1,8 @@
 <% provide :title, @category.name %>
 <div class="container">
-  <div><%= link_to t("create_lesson"),
-    category_lessons_path(params[:id]) %></div>
+  <div><%= link_to t(".create_lesson"),
+    category_lessons_path(params[:id]) %>
+  </div>
   <table class="table table-striped tbl-categories">
     <thead>
       <tr>
