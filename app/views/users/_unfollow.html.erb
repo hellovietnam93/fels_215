@@ -1,0 +1,5 @@
+<div class="col-md-2 col-offset-3">
+  <%= form_for @relationship, html: {method: :delete}, remote: true do |f| %>
+    <%= f.submit t(".unfollow"), class: "btn btn-primary" %>
+  <% end %>
+</div>

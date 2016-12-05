@@ -9,6 +9,7 @@ Rails.application.routes.draw do
     resources :lessons
   end
   resources :lessons
+  resources :relationships, only: [:index, :create, :destroy]
   namespace :admin do
     root "dashboard#index", as: :home
     resources :categories
