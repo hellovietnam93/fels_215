@@ -32,7 +32,7 @@ class Admin::CategoriesController < ApplicationController
 
   def update
     if @category.update_attributes category_params
-      flash[:success] = t "update_success"
+      flash[:success] = t "controllers.admin.update_success"
       redirect_to new_admin_category_path
     else
       render :edit
@@ -51,7 +51,7 @@ class Admin::CategoriesController < ApplicationController
   def find_category
     @category = Category.find_by id: params[:id]
     unless @category
-      flash[:danger] = t "category_not_found"
+      flash[:danger] = t "controllers.admin.category_not_found"
       redirect_to home_path
     end
   end

@@ -45,7 +45,7 @@ class UsersController < ApplicationController
   def find_user
     @user = User.find_by id: params[:id]
     if @user.nil?
-      flash[:danger] = "flash.error"
+      flash[:danger] = t "flash.error"
       redirect_to root_url
     end
   end
