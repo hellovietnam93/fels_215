@@ -7,6 +7,7 @@ class CreateLessons < ActiveRecord::Migration[5.0]
       t.datetime :finish_time
       t.references :category, foreign_key: true
       t.references :user, foreign_key: true
+      t.integer :status, default: 0
 
       t.timestamps
     end
