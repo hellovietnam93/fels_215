@@ -20,16 +20,6 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  fels215: "FELS215"
-  framgia: "FRAMGIA"
-  home: "Home"
-  login: "Log in"
-  signup: "Sign up"
-  profile: "Profile"
-  settings: "Settings"
-  logout: "Log out"
-  users: "Users"
-  account: "Account"
   admin: "Admin"
   category: "Category"
   place_add: "Add category..."
@@ -37,33 +27,105 @@ en:
   add_category: "Add category successfully"
   edit: "Edit"
   search: "Search"
-  search_categories: "Enter category"
   learn: "Learn"
-  update_success: "Update successfull"
   delete: "Delete"
-  delete_sucess: "You sure ?"
-  views:
-    user:
-      create: "Create my acount"
-      edit: "Save changes"
-      update: "Update my profile"
-      new: "Confirmation"
+  layouts:
+  add: "Add"
+  edit: "Edit"
+  delete: "Delete"
+  delete_success: "You sure ?"
+  name: "Name"
+  duration: "Duration"
+  word_per_lesson: "Word number"
+  option: "Option"
+
+  layouts:
+    header:
+      framgia: "FRAMGIA"
+      home: "Home"
+      login: "Log in"
+      signup: "Sign up"
+      profile: "Profile"
+      settings: "Settings"
+      logout: "Log out"
+      account: "Account"
+    admin:
+      admin_navbar:
+        users: "Users"
+        category: "Categories"
+        word: "Words"
+
   flash:
     signup: "Sign up sucessfull"
     error: "error"
     formcontains: "The form contains"
     update: "Profile updated"
-  category_not_found: "Category not found"
-  not_admin: "Not Admin"
-  please_login: "Please login"
-  word: "Words"
-  place_word: " Add word..."
-  add_word: "Add word successful"
-  need_avaliable: "need available"
-  no_more_than_one: "No more than one correct answer"
-  required-two-answers: "Required two answers"
-  num_answers: "must greater than 1"
-  name: "Name"
-  duration: "Duration"
-  word_per_lesson: "Number word per lesson"
-  option: "Option"
+  helpers:
+    lessons_helper:
+      status_new: "New"
+      status_finished: "Finished"
+      button_start: "Start"
+      button_view: "View"
+      button_continue: "Continue"
+      status_in_progress: "In progress"
+      button_finish: "Finish"
+    applications_helper:
+      fels215: "FELS215"
+
+  controllers:
+    admin:
+      update_success: "Update successful"
+      category_not_found: "Category not found"
+    not_admin: "Not Admin"
+    please_login: "Please login"
+    add_word: "Add word successful"
+
+  models:
+    word:
+      need_avaliable: "need available"
+      no_more_than_one: "No more than one correct answer"
+      num_answers: "must greater than 1"
+    lesson:
+      not_enough: "not enough"
+
+  lessons:
+    list_lessons: "List of lessons"
+    created_at: "Created at"
+    status: "Status"
+    spent_time: "Spent time"
+    score: "Score"
+    lesson:
+      date: "%Y-%m-%d"
+    index:
+      create_lesson: "Create lesson"
+  admin:
+    categories:
+      form:
+        category: "Category"
+      search_categories: "Enter category"
+    dashboard:
+      index:
+        admin: "Admin"
+    words:
+      form:
+        word: "Words"
+        add_new_word: "Add new word"
+        place_word: " Add word..."
+        required-two-answers: "Required two answers"
+
+  categories:
+    search_form:
+      search_categories: "Enter category"
+    admin:
+      words:
+  users:
+    new:
+      create: "Create my acount"
+      update: "Update my profile"
+      new: "Confirmation"
+      signup: "Sign up"
+    edit:
+      edit: "Save changes"
+  sessions:
+    new:
+      login: "Login"
