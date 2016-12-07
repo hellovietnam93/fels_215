@@ -147,3 +147,6 @@ en:
     stats:
       following: "following"
       follower: "follower"
+  words:
+    form_search:
+      all_categories: "All categories"

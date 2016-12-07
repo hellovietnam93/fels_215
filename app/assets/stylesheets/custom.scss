@@ -61,9 +61,11 @@ input {
 #height150 {
   height: 350px
 }
+
 #edit-category {
   margin-right: 15%;
 }
+
 #category-all {
   width: 1000px;
   margin-top: 15px;
@@ -108,21 +110,36 @@ input {
   text-align: center;
 }
 
-.txtSearch {
-  width: 500px;
-  float: left;
-  margin-left: 300px;
+.col-md-offset-3 {
+  margin-left: 15%;
 }
+
+.radio {
+  float: left;
+  margin-left: 10px;
+}
+
+.search-text {
+  float: left;
+  padding-left: 10px;
+}
+
+.txtSearch {
+  width: 150px;
+  margin-left: 20px;
+  float: left;
+}
+
 .btn-search {
-  width: 100px;
-  margin-left: 50px;
+  width: 70px;
+  margin-left: 10px;
   float:left;
 }
 
 .tbl-words {
   width: 30%;
-  margin-top: 100px;
-  margin-left: 400px;
+  margin-top: 120px;
+  margin-left: 200px;
   border: 1px solid lightgray;
   }
 
