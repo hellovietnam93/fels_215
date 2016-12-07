@@ -1,0 +1,10 @@
+<fieldset class="col-md-12 fields">
+  <div class="col-md-2">
+    <%= f.check_box :is_correct, class: "check_answers", value: false %>
+  </div>
+  <div class="col-md-8"><%= f.text_field :content %></div>
+  <%= f.hidden_field :_destroy %>
+  <div class="col-md-2">
+    <%= link_to "remove", "#", class: "btn btn-danger remove-fields" %>
+  </div>
+</fieldset>

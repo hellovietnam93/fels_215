@@ -4,7 +4,7 @@ class Word < ApplicationRecord
 
   belongs_to :category
 
-  accepts_nested_attributes_for :answers,
+  accepts_nested_attributes_for :answers, allow_destroy: true,
     reject_if: lambda {|attributes| attributes[:content].blank?}
 
   validates :content, presence: true
@@ -31,14 +31,14 @@ class Word < ApplicationRecord
 
   private
   def valid_answer_numbers
-    errors.add :answer, t(".num_answers") if  answers.size < 2
+    errors.add :answer, I18n.t("models.word.num_answers") if answers.size < 2
   end
 
   def check_correct_answer
     correct_answer = answers.select {|answers| answers.is_correct?}
     errors.add :correct_answer,
-      I18n.t(".need_avaliable") if correct_answer.empty?
+      I18n.t("models.word.need_avaliable") if correct_answer.empty?
     errors.add :correct_answer,
-      I18n.t(".no_more_than_one") if correct_answer.size > 1
+      I18n.t("models.word.no_more_than_one") if correct_answer.size > 1
   end
 end
