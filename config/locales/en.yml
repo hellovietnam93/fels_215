@@ -38,6 +38,7 @@ en:
   duration: "Duration(minutes)"
   word_per_lesson: "Words per lesson"
   option: "Option"
+  profile: "Profile"
 
   layouts:
     header:
@@ -45,7 +46,6 @@ en:
       home: "Home"
       login: "Log in"
       signup: "Sign up"
-      profile: "Profile"
       settings: "Settings"
       logout: "Log out"
       account: "Account"
@@ -134,6 +134,16 @@ en:
       signup: "Sign up"
     edit:
       edit: "Save changes"
+    index:
+      all_users: "All users"
+    follow:
+      follow: "Follow"
+    unfollow:
+      unfollow: "Unfollow"
   sessions:
     new:
       login: "Login"
+  shared:
+    stats:
+      following: "following"
+      follower: "follower"

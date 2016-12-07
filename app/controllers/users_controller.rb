@@ -1,12 +1,20 @@
 class UsersController < ApplicationController
-  before_action :logged_in_user, only: [:edit, :update]
-  before_action :find_user, only: [:show, :edit, :update]
+  include UserConcerns
+
+  before_action :logged_in_user, only: [:index, :edit, :update]
   before_action :correct_user, only: [:edit, :update]
+  before_action :find_user, only: [:show, :edit, :update]
 
   def index
+    @users = User.paginate page: params[:page], per_page: Settings.per_page
   end
 
   def show
+    @relationship = if current_user.following? @user
+      current_user.active_relationships.find_by followed_id: @user.id
+    else
+      current_user.active_relationships.build
+    end
   end
 
   def new
@@ -40,14 +48,6 @@ class UsersController < ApplicationController
   def user_params
     params.require(:user).permit :name, :email, :password,
       :password_confirmation
-  end
-
-  def find_user
-    @user = User.find_by id: params[:id]
-    if @user.nil?
-      flash[:danger] = t "flash.error"
-      redirect_to root_url
-    end
   end
 
   def correct_user
