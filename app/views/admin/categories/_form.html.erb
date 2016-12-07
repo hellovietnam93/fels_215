@@ -16,10 +16,10 @@
               <%= form_for [:admin, @category], remote: true do |f| %>
                 <%= f.label :name %>
                 <%= f.text_field :name %>
-                <%= f.label :duration %>
+                <%= f.label :duration %><%= t ".minutes" %>
                 <%= f.text_field :duration %>
                 <%= f.label :number_word_per_lesson %>
-                <%= f.text_field :num_ques_per_lesson %>
+                <%= f.text_field :word_per_lesson %>
                 <%= f.submit yield(:button_text), class: "btn btn-primary" %>
               <% end %>
               <br/><br/>

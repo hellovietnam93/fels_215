@@ -4,7 +4,7 @@
       <%= form_for :lesson, remote: true  do |f| %>
         <%= render "shared/error_messages", object: @lesson %>
         <%= f.label :lesson %>
-        <%= f.submit value: t(".create_lesson"),
+        <%= f.submit t(".create_lesson"),
           class: "btn btn-primary" %>
       <% end %>
     </div>

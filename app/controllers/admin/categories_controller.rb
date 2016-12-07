@@ -45,7 +45,7 @@ class Admin::CategoriesController < ApplicationController
 
   private
   def category_params
-    params.require(:category).permit :name, :duration, :num_ques_per_lesson
+    params.require(:category).permit :name, :duration, :word_per_lesson
   end
 
   def find_category

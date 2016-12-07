@@ -35,8 +35,8 @@ en:
   delete: "Delete"
   delete_success: "You sure ?"
   name: "Name"
-  duration: "Duration"
-  word_per_lesson: "Word number"
+  duration: "Duration(minutes)"
+  word_per_lesson: "Words per lesson"
   option: "Option"
 
   layouts:
@@ -60,6 +60,7 @@ en:
     error: "error"
     formcontains: "The form contains"
     update: "Profile updated"
+
   helpers:
     lessons_helper:
       status_new: "New"
@@ -79,6 +80,9 @@ en:
     not_admin: "Not Admin"
     please_login: "Please login"
     add_word: "Add word successful"
+    lessons:
+      lesson_not_found_message: "Lesson not found"
+      lesson_finished_error_message: "Lesson has finished"
 
   models:
     word:
@@ -98,10 +102,14 @@ en:
       date: "%Y-%m-%d"
     index:
       create_lesson: "Create lesson"
+    show:
+      button_finish: "Finish"
+      progress: "Progress"
   admin:
     categories:
       form:
         category: "Category"
+        minutes: " (minutes)"
       search_categories: "Enter category"
     dashboard:
       index:

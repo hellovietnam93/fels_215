@@ -3,7 +3,6 @@ class CreateLessons < ActiveRecord::Migration[5.0]
     create_table :lessons do |t|
       t.integer :spent_time
       t.string :score
-      t.datetime :start_time
       t.datetime :finish_time
       t.references :category, foreign_key: true
       t.references :user, foreign_key: true
