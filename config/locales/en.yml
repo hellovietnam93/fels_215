@@ -77,6 +77,7 @@ en:
     admin:
       update_success: "Update successful"
       category_not_found: "Category not found"
+    delete_word: "Word deleted"
     not_admin: "Not Admin"
     please_login: "Please login"
     add_word: "Add word successful"
@@ -120,6 +121,7 @@ en:
         add_new_word: "Add new word"
         place_word: " Add word..."
         required-two-answers: "Required two answers"
+        add_answer: "Add answer"
 
   categories:
     search_form:

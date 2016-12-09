@@ -1,1 +1,6 @@
-$('#div-words').prepend(" <%= j render @word %>");
+<% if @word.errors.any? %>
+  $("#div-error-messages").html(
+    "<%= j render("shared/error_messages", object: @word) %>");
+<% else %>
+  $('#div-words').prepend("<%= j render @word %>");
+<% end %>

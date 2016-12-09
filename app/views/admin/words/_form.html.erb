@@ -6,29 +6,23 @@
         <%= t ".word" %>
       </div>
       <div class="row">
-        <div class="col-md-6 col-md-offset-3" id="height-600">
+        <div class="col-md-8 col-md-offset-2" id="height-600">
           <h2><%= t ".add_new_word" %></h2>
           <%= form_for [:admin, @word], remote: true do |f| %>
-            <%= render "shared/error_messages", object: @word %>
-            <%= f.text_field :content,
-              placeholder: t(".place_word") %></br>
+            <div id="div-error-messages" ></div>
+            <%= f.text_field :content, placeholder: t(".place_word") %></br>
             <%= f.select :category_id, @categories %>
-            <%= f.fields_for :answers do |answer| %>
-              <span class="fields">
-                <div class="col-md-2 bh-input">
-                  <%= answer.check_box :is_correct, class: "check_answers",
-                    value: false %>
-                </div>
-                <div class="col-md-10"><%= answer.text_field :content %></div>
-              </span>
-            <% end %>
-            <%= hidden_field_tag "at-least-two-answers-msg",
-              t(".required-two-answers") %>
+            <div class="row-answer">
+              <%= f.fields_for :answers do |answer| %>
+                <%= render "answer_field", f: answer %>
+              <% end %>
+              <%= link_to_add_fields t(".add_answer"), f, :answers %>
+            </div>
             <%= f.submit yield(:button_text), class: "btn btn-primary" %>
           <% end %>
         </div>
       </div>
-      <div id="div-words" >
+      <div id="div-words">
         <%= render @words %>
         <%= will_paginate %>
       </div>

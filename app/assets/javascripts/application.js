@@ -16,7 +16,7 @@
 //= require turbolinks
 //= require_tree .
 
-$(document).on('turbolinks:load', function() {
+$(document).on('turbolinks:load', function () {
   if ($('#duration_lesson').length) {
     initCountdown();
     if ((typeof $counter) !== 'undefined') {
@@ -25,15 +25,41 @@ $(document).on('turbolinks:load', function() {
     $counter = setInterval(countdown, 1000);
   }
 
-  $('input:radio').change(function(){
+  $('input:radio').change(function () {
     $('#number-select').html($(":radio:checked").length);
+  });
+
+  $('form').on('click', '.remove-fields', function (event) {
+    event.preventDefault();
+    var count = $(this).parent().parent().siblings(".fields:visible").length + 1;
+
+    if ($(this).parent().siblings().children("input[type=checkbox]").is(":checked")) {
+      alert('Can not remove correct answer');
+    } else {
+      if (count <= 2) {
+        alert("Each word must have at least 2 answers");
+      } else {
+        $(this).parent().prev('input[type=hidden]').val('1');
+        $(this).closest('fieldset').hide();
+      }
+    }
+
+  }).on('click', '.add-fields', function (event) {
+    event.preventDefault();
+    var time = new Date().getTime();
+    var regexp = new RegExp($(this).data("id"), "g");
+    $(this).before($(this).data("fields").replace(regexp, time));
+    $(this).prev().children().children("input[type=text]").focus();
+  }).on('click', '.check_answers', function () {
+    $(this).parent().parent().siblings(".fields:visible").
+    children().children(".check_answers").prop("checked", false);
   });
 });
 
 function initCountdown() {
   $duration = parseInt($('#duration_lesson').attr('value'));
-  $minutes = Math.floor($duration/60);
-  $seconds = $duration - $minutes*60;
+  $minutes = Math.floor($duration / 60);
+  $seconds = $duration - $minutes * 60;
 }
 
 function countdown() {
