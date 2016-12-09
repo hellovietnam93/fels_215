@@ -83,6 +83,14 @@ en:
       button_finish: "Finish"
     applications_helper:
       fels215: "FELS215"
+    activities_helper:
+      activity_user_name_you: "You"
+      activity_follow_message: "has followed"
+      activity_unfollow_message: "has unfollowed"
+      activity_finished_lesson_message: "has finished a lesson in category"
+      activity_score_message: "with score:"
+      lesson_not_exist: "lesson not exist"
+      user_note_exist: "user not exist"
 
   controllers:
     admin:

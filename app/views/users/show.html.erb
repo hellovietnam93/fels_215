@@ -15,7 +15,11 @@
       <div class="panel-heading">
         <%= t ".activities" %>
       </div>
-      <div class="panel-body"></div>
+      <div class="panel-body">
+        <% if @user.activities.any? %>
+          <%= render @user.activities.order_by_created %>
+        <% end %>
+      </div>
     </div>
   </div>
 </div>

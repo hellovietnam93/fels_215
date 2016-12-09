@@ -9,6 +9,7 @@ class Lesson < ApplicationRecord
   validates :category, presence: true
 
   before_create :init_result
+  after_create :create_activity
 
   scope :order_desc, -> {order created_at: :desc}
 
@@ -39,5 +40,11 @@ class Lesson < ApplicationRecord
       end
     end
     assign_attributes score: score
+  end
+
+  private
+  def create_activity
+    Activity.create action_type: Activity.action_types[:finished_lesson],
+      user_id: self.user_id, target_id: self.id
   end
 end
