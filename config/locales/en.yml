@@ -42,22 +42,30 @@ en:
   user_not_found: "User not found"
   user_delete_error: "Cannot delete this user"
   users_management: "Users Management"
+  all_users: "All Users"
+  home: "Home"
+  logout: "Log out"
 
   layouts:
     header:
       framgia: "FRAMGIA"
-      home: "Home"
       login: "Log in"
       signup: "Sign up"
-      settings: "Settings"
-      logout: "Log out"
       account: "Account"
     admin:
       admin_navbar:
         users: "Users"
-        category: "Categories"
         word: "Words"
-
+        category: "Categories"
+    admin_header:
+      users: "Users"
+      categories: "Categories"
+    guess_header:
+      categories: "Categories"
+    user_header:
+      users: "Users"
+      categories: "Categories"
+      settings: "Settings"
   flash:
     signup: "Sign up sucessfull"
     error: "error"
@@ -117,6 +125,8 @@ en:
       search_categories: "Enter category"
       index:
         create_category: "Create category"
+      search_form:
+        search_categories: "Enter category"
     dashboard:
       index:
         admin: "Admin"

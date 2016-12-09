@@ -76,6 +76,7 @@ input, select, .uneditable-input {
 #left {
   float: left;
 }
+
 #right {
   #right {
     float: right;
@@ -85,7 +86,6 @@ input, select, .uneditable-input {
 /* Word */
 
 .product-word-all {
-  width: 1000px;
   margin-top: 10px;
   font-size: 20px;
 }
@@ -107,30 +107,10 @@ input, select, .uneditable-input {
   text-align: center;
 }
 
-.col-md-offset-3 {
-  margin-left: 15%;
-}
-
-.radio {
-  float: left;
-  margin-left: 10px;
-}
-
-.search-text {
-  float: left;
-  padding-left: 10px;
-}
-
-.txtSearch {
-  width: 150px;
-  margin-left: 20px;
-  float: left;
-}
-
 .btn-search {
   width: 70px;
   margin-left: 10px;
-  float:left;
+  float: left;
 }
 
 .tbl-words {
@@ -138,13 +118,13 @@ input, select, .uneditable-input {
   margin-top: 120px;
   margin-left: 200px;
   border: 1px solid lightgray;
-  }
+}
 
 .tbl-words td, th {
   text-align: center;
-  border: 1px solid lightgray;
   border-collapse: collapse;
 }
+
 .answer {
   color: red;
 }
@@ -225,3 +205,60 @@ input, select, .uneditable-input {
   text-align: center;
   font-size: 15px;
 }
+
+.navbar {
+  margin-bottom: 1px;
+}
+
+#logo {
+  float: left;
+}
+
+.user-profile {
+  text-align: center;
+  margin-top: 21px;
+  padding: 15px;
+  background-color: rgba(255, 255, 255, 0.7);
+  border: 1px solid rgba(192, 192, 192, 0.61);
+}
+
+.navbar-inverse {
+  background-color: #00897B;
+  border-color: #00897B;
+}
+
+.navbar-inverse .navbar-nav > li > a {
+  color: white;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.div-following {
+  float: left;
+  padding-left: 22%;
+}
+
+.theme {
+  width: 100%
+}
+
+.side-menu {
+  margin-top: 20px;
+  li {
+    width: 100%;
+    border: 1px solid #e0e0e0;
+  }
+}
+
+.content {
+  margin-top: 21px;
+}
+
+.show-category {
+  margin-top: 20px;
+}
+
+body {
+  background-color: #e9ebee;
+}
+

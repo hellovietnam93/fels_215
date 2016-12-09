@@ -2,7 +2,7 @@
   <div class="search-form">
     <%= text_field_tag :search, params[:search], placeholder:
       t(".search_categories"),
-        class: "form-control txtSearch" %>
+        class: "form-control" %>
     <%= submit_tag yield(:button_text), class: "btn btn-primary btn-search" %>
   </div>
 <% end %>
