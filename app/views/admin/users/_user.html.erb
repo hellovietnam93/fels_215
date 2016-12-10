@@ -1,0 +1,15 @@
+<div class="container content">
+  <div id="user-item-<%= user.id %>">
+    <div class="col-md-6 div-user">
+      <div class="col-md-6">
+        <%= link_to user.name, user %><br>
+        <%= user.email %><br>
+      </div>
+      <div class="col-md-6">
+        <%= link_to t("delete"), [:admin, user], method: :delete,
+          data: {confirm: t("delete_success")},
+          class: "btn btn-danger", remote: true %>
+      </div>
+    </div>
+  </div>
+</div>

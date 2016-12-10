@@ -14,5 +14,6 @@ Rails.application.routes.draw do
     root "dashboard#index", as: :home
     resources :categories
     resources :words
+    resources :users, only: [:index, :destroy]
   end
 end
