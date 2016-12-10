@@ -112,6 +112,8 @@ en:
         category: "Category"
         minutes: " (minutes)"
       search_categories: "Enter category"
+      index:
+        create_category: "Create category"
     dashboard:
       index:
         admin: "Admin"
