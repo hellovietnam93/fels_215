@@ -1,11 +1,10 @@
-<tr>
+<tr id="category-item-<%= category.id %>">
   <td><%= category.name %></td>
   <td><%= category.duration %></td>
   <td><%= category.word_per_lesson %></td>
   <td><%= link_to t("edit"),
     edit_admin_category_path(category.id), id: "edit-category" %>
-    <%= link_to t("delete"), "#", id: "delete-category",
-      method: :delete,
-      data: {confirm: t("delete_success")} %>
+    <%= link_to t("delete"),[:admin, category], remote: true,
+      id: "delete-category", method: :delete, data: {confirm: t("delete_success")} %>
   </td>
 </tr>

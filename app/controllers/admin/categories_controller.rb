@@ -40,7 +40,10 @@ class Admin::CategoriesController < ApplicationController
   end
 
   def destroy
-
+    @category.destroy
+    respond_to do |format|
+      format.js
+    end
   end
 
   private
