@@ -6,6 +6,6 @@ module CategoryUtils
   end
 
   def load_categories
-    @categories = Category.all.map { |category| [category.name, category.id] }
+    @categories = Category.all.map{|category| [category.name, category.id]}
   end
 end

@@ -1,12 +1,10 @@
 <%= provide :button_text, t("search") %>
 <%= render "form_search" %>
-<div>
-  <table class="table table-striped tbl-words">
+<div class="words">
+  <table class="container table table-striped tbl-words">
     <th><%= t ".word" %></th>
     <th><%= t ".meaning" %></th>
-    <tbody>
-      <%= render @words %>
+    <tbody class="word">
     </tbody>
-    <%= will_paginate %>
   </table>
 </div>
