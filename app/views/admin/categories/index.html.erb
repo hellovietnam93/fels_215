@@ -1,21 +1,23 @@
-<% provide :button_text, t("search") %>
-<%= render "search_form" %>
-<div>
-  <span class="btn btn-default" >
+<div class="container">
+  <% provide :button_text, t("search") %>
+  <%= render "search_form" %>
+  <div>
+  <span class="btn btn-default">
     <%= link_to t(".create_category"), new_admin_category_path %>
   </span>
-  <table class="table container">
-    <thead>
-      <tr>
-        <th><%= t "name" %></th>
-        <th><%= t "duration" %></th>
-        <th><%= t "word_per_lesson" %></th>
-        <th><%= t "option" %></th>
-      </tr>
-    </thead>
-    <tbody class="list-category">
-      <%= render @categories %>
-    </tbody>
-    <%= will_paginate %>
-  </table>
+    <table class="table">
+      <thead>
+        <tr>
+          <th><%= t "name" %></th>
+          <th><%= t "duration" %></th>
+          <th><%= t "word_per_lesson" %></th>
+          <th><%= t "option" %></th>
+        </tr>
+      </thead>
+      <tbody class="list-category">
+        <%= render @categories %>
+      </tbody>
+      <%= will_paginate %>
+    </table>
+  </div>
 </div>

@@ -1,14 +1,19 @@
 <% @user ||= current_user %>
 <div class="stats">
-  <%= link_to relationships_path id: @user.id, title: "following" do %>
-    <strong id="following" class="stat">
-      <%= @user.following.count %>
-      <%= t ".following" %>
-    </strong>
-  <% end %>
-  <%= link_to relationships_path id: @user.id, title: "followers" do %>
-    <strong id="followers" class="stat">
-      <%= pluralize @user.followers.count, t(".follower") %>
-    </strong>
-  <% end %>
+  <div class="div-following">
+    <%= link_to relationships_path id: @user.id, title: "following" do %>
+      <strong id="following" class="stat">
+        <%= @user.following.count %>
+      </strong>
+      <p><%= t ".following" %></p>
+    <% end %>
+  </div>
+  <div class="div-followers">
+    <%= link_to relationships_path id: @user.id, title: "followers" do %>
+      <strong id="followers" class="stat">
+        <%= @user.followers.count %>
+      </strong>
+      <p><%= t ".follower" %></p>
+    <% end %>
+  </div>
 </div>

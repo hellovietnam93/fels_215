@@ -1,7 +1,11 @@
 <%= form_tag admin_categories_path, method: :get do %>
-  <p>
-    <%= text_field_tag :search, params[:search], placeholder:
-      t(".search_categories"), class: "form-control txtSearch" %>
-    <%= submit_tag yield(:button_text), class: "btn btn-primary" %>
-  </p>z
+  <div class="col-md-6 col-md-offset-3">
+    <div class="col-md-7">
+      <%= text_field_tag :search, params[:search], placeholder:
+        t(".search_categories"), class: "form-control" %>
+    </div>
+    <div class="col-md-3">
+      <%= submit_tag yield(:button_text), class: "btn btn-primary" %>
+    </div>
+  </div>
 <% end %>
