@@ -39,6 +39,9 @@ en:
   word_per_lesson: "Words per lesson"
   option: "Option"
   profile: "Profile"
+  user_not_found: "User not found"
+  user_delete_error: "Cannot delete this user"
+  users_management: "Users Management"
 
   layouts:
     header:
@@ -122,6 +125,10 @@ en:
         place_word: " Add word..."
         required-two-answers: "Required two answers"
         add_answer: "Add answer"
+    users:
+      search_form:
+        enter_user: "Enter user"
+        users: "Users"
 
   categories:
     search_form:
